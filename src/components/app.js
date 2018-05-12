@@ -4,8 +4,8 @@ angular.module('video-player')
   controller: function (youTube) {
     console.log(this);
     console.log('hello');
-    this.appVideoData = exampleVideoData;
-    this.currentVideo = exampleVideoData[1];
+    // this.appVideoData = exampleVideoData;
+    // this.currentVideo = exampleVideoData[1];
     
     //note the $ctrl.choosevideo WITHOUT the () in app.html
     //you only wanna pass the invocation when it's on click
@@ -24,7 +24,8 @@ angular.module('video-player')
       this.currentVideo = response.data.items[0];
     };
 
-    //youTube.getvids(1,2);
+    //default search
+    youTube.getvids('cute kittens',this.getvideos);
   },
   templateUrl: 'src/templates/app.html'
 });

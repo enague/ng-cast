@@ -5,7 +5,6 @@ angular.module('video-player')
     callback: '<'
   },
   controller: function (youTube){
-    
     this.click = function () {
       youTube.getvids(this.inputVal, this.callback); 
     }
