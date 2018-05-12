@@ -4,10 +4,10 @@ angular.module('video-player')
   bindings: {
     callback: '<'
   },
-  controller: function (){
+  controller: function (youTube){
     
     this.click = function () {
-      youTube.getVideos(this.inputVal, this.callback); 
+      youTube.getvids(this.inputVal, this.callback); 
     }
   },
   templateUrl: "src/templates/search.html"

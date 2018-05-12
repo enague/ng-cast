@@ -5,8 +5,8 @@ angular.module('video-player')
     //choose: '<'
   },
   controller: function () {
-    console.log('hello from VLE');
-    console.log(this);
+    //console.log('hello from VLE');
+    //console.log(this);
   },
   templateUrl: "src/templates/videoListEntry.html"
 });

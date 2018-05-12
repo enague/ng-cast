@@ -13,16 +13,15 @@ angular.module('video-player')
     //NOT in app.html
     this.choosevideo = video => {
       this.currentVideo = video;
-      youTube.getvids();
-      
+      //youTube.getvids(); 
     };
 
 
     this.getvideos = response => {
       //console.log('sup')
       //call our youtube videos from here
-      this.appVideoData = response;
-      this.currentVideo = response[0];
+      this.appVideoData = response.data.items;
+      this.currentVideo = response.data.items[0];
     };
 
     //youTube.getvids(1,2);
