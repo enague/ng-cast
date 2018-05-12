@@ -1,7 +1,7 @@
 angular.module('video-player')
 .component('videoList', {
   bindings: {
-    videos: '<',
+    videoListVideoData: '<',
   },
   controller: function($scope) {
     //this.videoListVideoData = exampleVideoData;
