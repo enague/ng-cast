@@ -12,6 +12,12 @@ angular.module('video-player')
     this.choosevideo = video => {
       this.currentVideo = video;
     }
+
+    this.getvideos = response => {
+      //console.log('sup')
+      this.appVideoData = response;
+      this.currentVideo = response[0];
+    }
   },
   templateUrl: 'src/templates/app.html'
 });
