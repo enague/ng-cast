@@ -4,9 +4,12 @@ angular.module('video-player')
   controller: function () {
     this.appVideoData = exampleVideoData;
     this.currentVideo = exampleVideoData[1];
-    this.choosevideo = (video) => {
-      console.log('i was clicked');
-      console.log(video);
+    
+    //note the $ctrl.choosevideo WITHOUT the () in app.html
+    //you only wanna pass the invocation when it's on click
+    //so you put parens when you pass it down in videolist.html
+    //NOT in app.html
+    this.choosevideo = video => {
       this.currentVideo = video;
     }
   },

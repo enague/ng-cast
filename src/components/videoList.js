@@ -7,7 +7,6 @@ angular.module('video-player')
   controller: function() {
     //this.videoListVideoData = exampleVideoData;
     console.log('hello from videoList');
-    //.console.log(video);
     // this.choose = function(video) {
     //   console.log(video);
     // }
