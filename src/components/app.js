@@ -1,7 +1,9 @@
 angular.module('video-player')
 
 .component('app', {
-  controller: function () {
+  controller: function (youTube) {
+    console.log(this);
+    console.log('hello');
     this.appVideoData = exampleVideoData;
     this.currentVideo = exampleVideoData[1];
     
@@ -11,13 +13,19 @@ angular.module('video-player')
     //NOT in app.html
     this.choosevideo = video => {
       this.currentVideo = video;
-    }
+      youTube.getvids();
+      
+    };
+
 
     this.getvideos = response => {
       //console.log('sup')
+      //call our youtube videos from here
       this.appVideoData = response;
       this.currentVideo = response[0];
-    }
+    };
+
+    //youTube.getvids(1,2);
   },
   templateUrl: 'src/templates/app.html'
 });
