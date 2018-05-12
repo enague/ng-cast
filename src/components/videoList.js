@@ -7,6 +7,9 @@ angular.module('video-player')
     //this.videoListVideoData = exampleVideoData;
     console.log('hello from videoList');
     //.console.log(video);
+    this.choose = function(video) {
+      console.log('clicked')
+    }
     
   },
   //template: "<h1> hello! </h1>"

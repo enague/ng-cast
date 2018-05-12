@@ -3,6 +3,9 @@ angular.module('video-player')
 .component('app', {
   controller: function () {
     this.appVideoData = exampleVideoData;
+    this.choose = function(video) {
+      console.log('clicked')
+    }
   },
   templateUrl: 'src/templates/app.html'
 });
