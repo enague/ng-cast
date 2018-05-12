@@ -3,8 +3,11 @@ angular.module('video-player')
 .component('app', {
   controller: function () {
     this.appVideoData = exampleVideoData;
-    this.choose = function(video) {
-      console.log('clicked')
+    this.currentVideo = exampleVideoData[1];
+    this.choosevideo = (video) => {
+      console.log('i was clicked');
+      console.log(video);
+      this.currentVideo = video;
     }
   },
   templateUrl: 'src/templates/app.html'

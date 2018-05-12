@@ -2,14 +2,15 @@ angular.module('video-player')
 .component('videoList', {
   bindings: {
     videoListVideoData: '<',
+    choose: '<'
   },
-  controller: function($scope) {
+  controller: function() {
     //this.videoListVideoData = exampleVideoData;
     console.log('hello from videoList');
     //.console.log(video);
-    this.choose = function(video) {
-      console.log('clicked')
-    }
+    // this.choose = function(video) {
+    //   console.log(video);
+    // }
     
   },
   //template: "<h1> hello! </h1>"
